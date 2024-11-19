@@ -14,7 +14,7 @@ const ngrokAuthToken = process.env.NGROK_AUTHTOKEN;
 // GitHub Actions status
 async function getGitHubActionsStatus() {
     try {
-        const response = await axios.get('https://api.github.com/repos/YOUR_GITHUB_USER/YOUR_REPO/actions/runs', {
+        const response = await axios.get('https://api.github.com/Lincolncowper/HenDeveloper/actions/runs', {
             headers: {
                 Authorization: `Bearer ${githubToken}`,
             },
@@ -41,7 +41,7 @@ async function getNgrokUrl() {
 // Restart GitHub Actions if it's down
 async function triggerGitHubActions() {
     try {
-        await axios.post('https://api.github.com/repos/YOUR_GITHUB_USER/YOUR_REPO/actions/workflows/YOUR_WORKFLOW_FILE/dispatches', 
+        await axios.post('https://api.github.com/Lincolncowper/HenDeveloper/actions/workflows/win2022.yml/dispatches', 
             {
                 ref: 'main', // or any branch you want to trigger
             }, 
