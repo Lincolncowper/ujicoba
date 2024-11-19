@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: rdp-server
+    env: node
+    buildCommand: "npm install"
+    startCommand: "node index.js"
+    envVars:
+      - key: GITHUB_TOKEN
+        value: your-github-token
+      - key: NGROK_AUTHTOKEN
+        value: your-ngrok-token
+    plan: free
